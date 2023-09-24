@@ -202,7 +202,6 @@ void Game::processMouseClick()
 	{
 		if (sf::Mouse::isButtonPressed(sf::Mouse::Left) && !this->mouseHold)
 		{
-			std::cout << "pause\n";
 			this->isPause = !this->isPause;
 			this->gui.pause = !this->gui.pause;
 			this->mouseHold = true;
@@ -215,7 +214,6 @@ void Game::processMouseClick()
 	{
 		if (sf::Mouse::isButtonPressed(sf::Mouse::Left))
 		{
-			std::cout << "keo\n";
 			this->gui.setCurX(sf::Mouse::getPosition(*this->window).x);
 			this->mouseHold = true;
 		}
@@ -225,7 +223,6 @@ void Game::processMouseClick()
 	{
 		if (sf::Mouse::isButtonPressed(sf::Mouse::Left) && !this->mouseHold)
 		{
-			std::cout << "replay\n";
 			this->isLose = false;
 			this->reset();
 			this->mouseHold = true;
